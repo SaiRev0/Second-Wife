@@ -1,0 +1,363 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/index.css" />
+<!-- desktop view -->
+  <div class="container" id="container">
+    <div id="menu">
+      <div class="title">
+        <img class ="logo" src="https://res.cloudinary.com/sairev-production/image/upload/v1650662514/images/secondwife_xizyfs.png" alt="" />
+      </div>
+      <div class="menu-item">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+
+    <div id="food-container">
+      <div id="header">
+        <div class="add-box">
+          <i class="fa fa-map-marker your-address" id="add-address">
+            Your Address</i>
+        </div>
+        <div class="util">
+          <i class="fa fa-cart-plus" id="cart-plus"> 0 Items</i>
+        </div>
+      </div>
+      <div id="food-items" class="d-food-items">
+
+        <div id="desert" class="d-desert">
+          <p id="category-name">Desert</p>
+          <% for (let food of desert){ %>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% } %>
+        </div>
+
+        <div id="biryani" class="d-biryani">
+          <p id="category-name">Biryani</p>
+          <% for (let food of biryani){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="chinese" class="d-chinese">
+          <p id="category-name">Chinese Corner</p>
+          <% for (let food of chinese){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="maggi" class="d-maggi">
+          <p id="category-name">Maggi Corner</p>
+          <% for (let food of maggi){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="paneer" class="d-paneer">
+          <p id="category-name">Paneer Mania</p>
+          <% for (let food of paneer){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="dosa" class="d-dosa">
+          <p id="category-name">Dosa</p>
+          <% for (let food of dosa){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="special" class="d-special">
+          <p id="category-name">Special Corner</p>
+          <% for (let food of special){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="chicken" class="d-chicken">
+          <p id="category-name">Chicken Delicious</p>
+          <% for (let food of chicken){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="vegetable" class="d-vegetable">
+          <p id="category-name">Pure Veg Dishes</p>
+          <% for (let food of vegetable){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+
+        <div id="south-indian" class="d-south-indian">
+          <p id="category-name">South Indian</p>
+          <% for (let food of southIndian){%>
+          <div class="<%= food.type %>" id="item-card">
+            <div id="card-top">
+              <i class="fa fa-star" id="rating"><%= food.rating %></i>
+              <button class="fa myButton style add-to-cart" id="<%= food._id %>">Add</button>
+            </div>
+            <ul hidden>
+              <li><%= food.category %></li>
+              <li><%= food.name %></li>
+              <li><%= food.img %></li>
+              <li><%= food.quantity %></li>
+              <li><%= food.rating %></li>
+              <li><%= food.price %></li>
+              <li><%= food._id %></li>
+            </ul>
+            <img src="<%= food.img %>" />
+            <p id="item-name"><%= food.name %></p>
+            <p id="item-price">Price : ₹ <%= food.price %></p>
+          </div>
+          <% }%>
+        </div>
+      </div>
+
+      <div id="cart-page" class="cart-toggle">
+        <p id="cart-title">Cart Items</p>
+        <p id="m-total-amount">Total Amout : 100</p>
+        <table>
+          <thead>
+            <td>Item</td>
+            <td>Name</td>
+            <td>Quantity</td>
+            <td>Price</td>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+        <div class="btn-box">
+        </div>
+      </div>
+    </div>
+
+    <div id="cart">
+      <div class="taste-header">
+      </div>
+      <div id="category-list">
+        <p class="item-menu">Choice From</p>
+        <div class="border"></div>
+        <div id="veg" class="list-card">
+          <img src="https://res.cloudinary.com/sairev-production/image/upload/v1650662519/images/veg_non-veg/veg_zcud72.png">
+          <a  class="list-name">Veg</a>
+        </div>
+        <div id="non_veg" class="list-card">
+          <img src="https://res.cloudinary.com/sairev-production/image/upload/v1650662518/images/veg_non-veg/non-veg_gjr11l.png">
+          <a  class="list-name">Non-Veg</a>
+        </div>
+        <div id="all" class="list-card">
+          <img src="https://res.cloudinary.com/sairev-production/image/upload/v1650662518/images/veg_non-veg/both_f9tzfs.png">
+          <a  class="list-name">All</a>
+        </div>
+      </div>
+      <div id="checkout" class="cart-toggle">
+        <p id="total-item">Total Item : 5</p>
+        <p id="total-price"></p>
+        <p id="delievery">Free delievery over order of ₹ 200</p>
+        <a href="/checkout" class="cart-btn">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile view -->
+  <div id="mobile-view" class="mobile-view">
+    <div class="mobile-top">
+      <div class="logo-box">
+        <img src="images/secondwife.png" alt="" id="logo" />
+        <i class="fa fa-map-marker your-address" id="m-add-address">
+          Your Address</i
+        >
+      </div>
+      <div class="top-menu">
+        <i class="fa fa-search"></i>
+        <i class="fa fa-tag"></i>
+        <i class="fa fa-heart-o"></i>
+        <i class="fa fa-cart-plus" id="m-cart-plus"> 0</i>
+      </div>
+    </div>
+
+    <div class="item-container">
+      <div class="category-header" id="category-header"></div>
+
+      <div id="food-items" class="food-items">
+        <div id="biryani" class="m-biryani">
+          <p id="category-name">Biryani</p>
+        </div>
+        <div id="chicken" class="m-chicken">
+          <p id="category-name">Chicken Delicious</p>
+        </div>
+        <div id="paneer" class="m-paneer">
+          <p id="category-name">Paneer Mania</p>
+        </div>
+        <div id="vegetable" class="m-vegetable">
+          <p id="category-name">Pure Veg Dishes</p>
+        </div>
+        <div id="chinese" class="m-chinese">
+          <p id="category-name">Chinese Corner</p>
+        </div>
+        <div id="south-indian" class="m-south-indian">
+          <p id="category-name">South Indian</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-footer">
+      <p>Home</p>
+      <p>Cart</p>
+      <p>offers</p>
+      <p>orders</p>
+    </div>
+  </div>
+  <script src="/javascripts/index.js" type="module"></script>
+</form>
