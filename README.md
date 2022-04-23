@@ -40,4 +40,3 @@
 * utils folder contains error handling for the website
 * public folder contains all the images, css and js of the different parts of the website
 * model folder contains the mongoose schema for data storage
-* 
